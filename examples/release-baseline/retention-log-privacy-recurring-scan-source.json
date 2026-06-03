@@ -49,8 +49,8 @@
   "scannerBaseline": {
     "scannerVersion": "retention-log-privacy-recurring-scan-promoter.v1",
     "rulesetVersion": "rlp164-public-safe-ruleset-v1",
-    "forbiddenMaterialCatalogHash": "88153837b45b4eddffed565f5448ec7edcb3a7b8738c5fb9566b6844f702b550",
-    "outputFamilyRegistryHash": "b685de9e417a2cbbf4b766f51dd9a495bce4aebff616308bc1324da394dad2f4"
+    "forbiddenMaterialCatalogHash": "6f837e7306b4ca9252a7a9bcb377d1bf1dd142330b24212dd26549d6bcd53039",
+    "outputFamilyRegistryHash": "756b6e5b3bbbbcd75cce32a5b51865af7d10011a699098bfd5a73dc7832237d6"
   },
   "outputFamilies": [
     {
