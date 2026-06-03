@@ -1,0 +1,35 @@
+{
+  "consumers": [
+    {
+      "allowedUse": "governance customer handoff audit pack may reference accepted public package refs and non-claim wording.",
+      "consumerId": "FEAT-166"
+    },
+    {
+      "allowedUse": "promotion owner may review proposal-only RDY-DIM-008 8 -\u003E 9 evidence before any separate register promotion.",
+      "consumerId": "internal_audit_95_promotion_owner"
+    }
+  ],
+  "featureId": "FEAT-164",
+  "generatedAt": "2026-06-03T00:00:00Z",
+  "nonClaims": [
+    "external_audit_acceptance",
+    "certification",
+    "legal_sufficiency",
+    "public_state_election_readiness",
+    "production_rollout_approval",
+    "direct_register_mutation"
+  ],
+  "payloadPublication": "disabled",
+  "publicRefs": [
+    "retention-log-privacy-recurring-scan-manifest.json",
+    "retention-log-privacy-recurring-scan-package.json",
+    "readiness/retention-log-privacy-recurring-scan-readiness-fragment.json",
+    "readiness/retention-log-privacy-recurring-scan-score-proposal.json"
+  ],
+  "residualRisk": "Reviewer acceptance is still required before any readiness-register promotion.",
+  "restrictedRefs": [
+    "REST-RLP164-20260603-001"
+  ],
+  "scanRunId": "FEAT164-RLP-SCAN-20260603-001",
+  "schemaVersion": "retention-log-privacy-recurring-scan-downstream-handoff.v1"
+}

@@ -1,0 +1,25 @@
+{
+  "driftDecision": "fail_closed_when_changed",
+  "families": [
+    {
+      "familyId": "logs",
+      "payloadPublished": false,
+      "resultCode": "RLP164_ACCEPTED",
+      "scannerDecision": "scan_required",
+      "visibility": "public"
+    },
+    {
+      "familyId": "diagnostics",
+      "payloadPublished": false,
+      "resultCode": "RLP164_ACCEPTED",
+      "scannerDecision": "scan_required",
+      "visibility": "public"
+    }
+  ],
+  "featureId": "FEAT-164",
+  "generatedAt": "2026-06-03T00:00:00Z",
+  "publicPayloadPublication": "policy_checked",
+  "schemaVersion": "retention-log-privacy-log-diagnostic-scan-summary.v1",
+  "status": "accepted",
+  "summaryId": "log_diagnostic_scan"
+}

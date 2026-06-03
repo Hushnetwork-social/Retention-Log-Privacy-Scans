@@ -1,0 +1,127 @@
+{
+  "schemaVersion": "retention-log-privacy-negative-fixture-catalog.v1",
+  "featureId": "FEAT-164",
+  "generatedAt": "2026-06-03T00:00:00Z",
+  "baseFixture": "../release-baseline/retention-log-privacy-recurring-scan-source.json",
+  "fixtures": [
+    {
+      "fixtureId": "stale-feat137-proof",
+      "description": "Accepted FEAT-137 package hash is changed to a stale value.",
+      "mutationPath": "$.feat137Proof.packageHash",
+      "mutationValue": "0000000000000000000000000000000000000000000000000000000000000000",
+      "expectedResultCodes": [
+        "RLP164_FEAT137_PROOF_CURRENTNESS_BLOCKED"
+      ]
+    },
+    {
+      "fixtureId": "missing-scanner-baseline",
+      "description": "Scanner baseline is omitted.",
+      "mutationPath": "$.scannerBaseline",
+      "mutationValue": null,
+      "expectedResultCodes": [
+        "RLP164_SCANNER_BASELINE_MISSING"
+      ]
+    },
+    {
+      "fixtureId": "unclassified-output-family",
+      "description": "A new output family appears without a scanner decision.",
+      "mutationPath": "$.outputFamilies[+]",
+      "mutationValue": {
+        "familyId": "new_unclassified_export",
+        "visibility": "public",
+        "scannerDecision": "not_applicable",
+        "publicPayloadAllowed": true,
+        "allowedPublicFields": [
+          "summary"
+        ],
+        "forbiddenFields": [
+          "rawPayload"
+        ]
+      },
+      "expectedResultCodes": [
+        "RLP164_UNCLASSIFIED_OUTPUT_FAMILY"
+      ]
+    },
+    {
+      "fixtureId": "forbidden-voter-material",
+      "description": "A public scan input attempts to include a voter identifier marker.",
+      "mutationPath": "$.scanInputs[0].voterIdentifier",
+      "mutationValue": "redacted-example-only",
+      "expectedResultCodes": [
+        "RLP164_FORBIDDEN_VOTER_MATERIAL"
+      ]
+    },
+    {
+      "fixtureId": "ballot-linkage",
+      "description": "A public scan input attempts to include a ballot linkage marker.",
+      "mutationPath": "$.scanInputs[0].ballotReference",
+      "mutationValue": "redacted-ballot-ref",
+      "expectedResultCodes": [
+        "RLP164_BALLOT_LINKAGE_FORBIDDEN"
+      ]
+    },
+    {
+      "fixtureId": "raw-log",
+      "description": "A public scan input attempts to publish a raw log payload marker.",
+      "mutationPath": "$.scanInputs[0].rawLogPayload",
+      "mutationValue": "redacted raw log example",
+      "expectedResultCodes": [
+        "RLP164_RAW_LOG_FORBIDDEN"
+      ]
+    },
+    {
+      "fixtureId": "trace-label",
+      "description": "A trace output includes an unapproved correlation label marker.",
+      "mutationPath": "$.scanInputs[2].correlationLabel",
+      "mutationValue": "redacted-correlation-label",
+      "expectedResultCodes": [
+        "RLP164_TRACE_PAYLOAD_FORBIDDEN"
+      ]
+    },
+    {
+      "fixtureId": "support-payload",
+      "description": "A support-export output attempts to publish support case content.",
+      "mutationPath": "$.scanInputs[4].supportCaseContent",
+      "mutationValue": "redacted support case content",
+      "expectedResultCodes": [
+        "RLP164_SUPPORT_PAYLOAD_FORBIDDEN"
+      ]
+    },
+    {
+      "fixtureId": "private-path",
+      "description": "A public source ref points at a restricted reviewer location.",
+      "mutationPath": "$.scanInputs[0].sourceRef.path",
+      "mutationValue": "PrivateServer_ElectronicVoting/Retention-Log-Privacy-Recurring-Scans/raw-log.json",
+      "expectedResultCodes": [
+        "RLP164_PRIVATE_PATH_FORBIDDEN"
+      ]
+    },
+    {
+      "fixtureId": "direct-register-mutation",
+      "description": "The source attempts to mutate the readiness register directly.",
+      "mutationPath": "$.scorePolicy.directRegisterMutation",
+      "mutationValue": true,
+      "expectedResultCodes": [
+        "RLP164_DIRECT_REGISTER_MUTATION_FORBIDDEN"
+      ]
+    },
+    {
+      "fixtureId": "wrong-score-range",
+      "description": "The source proposes the wrong score range.",
+      "mutationPath": "$.scorePolicy.proposedScoreTo",
+      "mutationValue": 10,
+      "expectedResultCodes": [
+        "RLP164_WRONG_SCORE_RANGE"
+      ]
+    },
+    {
+      "fixtureId": "public-only-private-dependency",
+      "description": "Public-only validation attempts to require a private dependency.",
+      "mutationPath": "$.publicSafetyPolicy.publicOnlyValidation",
+      "mutationValue": false,
+      "expectedResultCodes": [
+        "RLP164_PUBLIC_ONLY_PRIVATE_DEPENDENCY"
+      ]
+    }
+  ]
+}

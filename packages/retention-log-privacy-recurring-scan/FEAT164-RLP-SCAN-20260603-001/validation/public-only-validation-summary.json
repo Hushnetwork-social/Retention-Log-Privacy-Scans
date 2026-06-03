@@ -1,0 +1,12 @@
+{
+  "featureId": "FEAT-164",
+  "generatedAt": "2026-06-03T00:00:00Z",
+  "livePrivateServicesRequired": false,
+  "privateCheckoutRequired": false,
+  "privateCredentialsRequired": false,
+  "publicOnlyReplayModeSupported": true,
+  "publicOnlyValidation": true,
+  "resultCode": "RLP164_ACCEPTED",
+  "schemaVersion": "retention-log-privacy-public-only-validation-summary.v1",
+  "status": "accepted"
+}

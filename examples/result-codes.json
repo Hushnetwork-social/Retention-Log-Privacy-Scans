@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "retention-log-privacy-result-codes.v1",
+  "featureId": "FEAT-164",
+  "generatedAt": "2026-06-03T00:00:00Z",
+  "acceptedCode": "RLP164_ACCEPTED",
+  "blockingCodes": [
+    "RLP164_STALE_READINESS_BASELINE",
+    "RLP164_FEAT137_PROOF_CURRENTNESS_BLOCKED",
+    "RLP164_FEAT137_REUSE_AS_RECURRING_PROOF",
+    "RLP164_SCANNER_BASELINE_MISSING",
+    "RLP164_RULE_HASH_MISMATCH",
+    "RLP164_UNCLASSIFIED_OUTPUT_FAMILY",
+    "RLP164_FORBIDDEN_VOTER_MATERIAL",
+    "RLP164_BALLOT_LINKAGE_FORBIDDEN",
+    "RLP164_RAW_LOG_FORBIDDEN",
+    "RLP164_TRACE_PAYLOAD_FORBIDDEN",
+    "RLP164_SUPPORT_PAYLOAD_FORBIDDEN",
+    "RLP164_PRIVATE_PATH_FORBIDDEN",
+    "RLP164_SECRET_FORBIDDEN",
+    "RLP164_PRIVATE_FINDING_FORBIDDEN",
+    "RLP164_DIRECT_REGISTER_MUTATION_FORBIDDEN",
+    "RLP164_WRONG_SCORE_RANGE",
+    "RLP164_PUBLIC_ONLY_PRIVATE_DEPENDENCY",
+    "RLP164_OVERCLAIM_FORBIDDEN"
+  ],
+  "claimImpacts": {
+    "accepted": "proposal_only_score_movement_allowed_after_reviewer_acceptance",
+    "blocked": "score_movement_blocked_until_source_or_drift_is_corrected",
+    "downgraded": "privacy_currentness_wording_must_be_downgraded"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "driftDecision": "fail_closed_when_changed",
+  "families": [
+    {
+      "familyId": "traces",
+      "payloadPublished": false,
+      "resultCode": "RLP164_ACCEPTED",
+      "scannerDecision": "scan_required",
+      "visibility": "public"
+    },
+    {
+      "familyId": "metrics",
+      "payloadPublished": false,
+      "resultCode": "RLP164_ACCEPTED",
+      "scannerDecision": "scan_required",
+      "visibility": "public"
+    }
+  ],
+  "featureId": "FEAT-164",
+  "generatedAt": "2026-06-03T00:00:00Z",
+  "publicPayloadPublication": "policy_checked",
+  "schemaVersion": "retention-log-privacy-trace-observability-drift-summary.v1",
+  "status": "accepted",
+  "summaryId": "trace_observability_drift"
+}
