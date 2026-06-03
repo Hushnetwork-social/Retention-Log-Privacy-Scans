@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Hushnetwork-social/Retention-Log-Privacy-Scans/schemas/retention-log-privacy-recurring-scan-package-manifest.schema.json",
+  "title": "Retention Log Privacy Recurring Scan Package Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "featureId",
+    "packageId",
+    "scanRunId",
+    "generatedAt",
+    "sourceRef",
+    "artifactHashes",
+    "validationStatus",
+    "readinessOutput",
+    "restrictedEvidencePolicy"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "retention-log-privacy-recurring-scan-package-manifest.v1"
+    },
+    "featureId": {
+      "const": "FEAT-164"
+    },
+    "packageId": {
+      "type": "string",
+      "pattern": "^FEAT164-RLP-SCAN-PACKAGE-[0-9]{8}-[0-9]{3}$"
+    },
+    "scanRunId": {
+      "type": "string",
+      "pattern": "^FEAT164-RLP-SCAN-[0-9]{8}-[0-9]{3}$"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sourceRef": {
+      "$ref": "#/$defs/publicRef"
+    },
+    "artifactHashes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/artifactHash"
+      }
+    },
+    "validationStatus": {
+      "$ref": "#/$defs/validationStatus"
+    },
+    "readinessOutput": {
+      "$ref": "#/$defs/readinessOutput"
+    },
+    "restrictedEvidencePolicy": {
+      "$ref": "#/$defs/restrictedEvidencePolicy"
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "publicRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository",
+        "ref",
+        "path"
+      ],
+      "properties": {
+        "repository": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "not": {
+            "pattern": "hush-documents|PrivateServer_ElectronicVoting|C:\\\\"
+          }
+        }
+      }
+    },
+    "artifactHash": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256Hash",
+        "mediaType",
+        "visibility"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "not": {
+            "pattern": "hush-documents|PrivateServer_ElectronicVoting|C:\\\\"
+          }
+        },
+        "sha256Hash": {
+          "$ref": "#/$defs/sha256"
+        },
+        "mediaType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "visibility": {
+          "enum": [
+            "public",
+            "restricted-ref",
+            "private-ref"
+          ]
+        }
+      }
+    },
+    "validationStatus": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "allRequiredGatesAccepted",
+        "blockingResultCodes"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "accepted",
+            "blocked",
+            "rejected"
+          ]
+        },
+        "allRequiredGatesAccepted": {
+          "type": "boolean"
+        },
+        "blockingResultCodes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "readinessOutput": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dimensionId",
+        "proposedScoreFrom",
+        "proposedScoreTo",
+        "directRegisterMutation",
+        "targetBlockerId"
+      ],
+      "properties": {
+        "dimensionId": {
+          "const": "RDY-DIM-008"
+        },
+        "proposedScoreFrom": {
+          "const": 8
+        },
+        "proposedScoreTo": {
+          "const": 9
+        },
+        "directRegisterMutation": {
+          "const": false
+        },
+        "targetBlockerId": {
+          "const": "RDY-BLOCK-INTERNAL_AUDIT_95_DIM008-001"
+        }
+      }
+    },
+    "restrictedEvidencePolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "payloadPublished",
+        "publicRefFieldsOnly"
+      ],
+      "properties": {
+        "payloadPublished": {
+          "const": false
+        },
+        "publicRefFieldsOnly": {
+          "const": true
+        }
+      }
+    }
+  }
+}
