@@ -1,0 +1,32 @@
+{
+  "driftDecision": "fail_closed_when_changed",
+  "families": [
+    {
+      "familyId": "public_packages",
+      "payloadPublished": true,
+      "resultCode": "RLP164_ACCEPTED",
+      "scannerDecision": "scan_required",
+      "visibility": "public"
+    },
+    {
+      "familyId": "reviewer_reports",
+      "payloadPublished": true,
+      "resultCode": "RLP164_ACCEPTED",
+      "scannerDecision": "public_safe_summary_only",
+      "visibility": "public"
+    },
+    {
+      "familyId": "ci_outputs",
+      "payloadPublished": true,
+      "resultCode": "RLP164_ACCEPTED",
+      "scannerDecision": "scan_required",
+      "visibility": "public"
+    }
+  ],
+  "featureId": "FEAT-164",
+  "generatedAt": "2026-06-03T00:00:00Z",
+  "publicPayloadPublication": "policy_checked",
+  "schemaVersion": "retention-log-privacy-package-report-scan-summary.v1",
+  "status": "accepted",
+  "summaryId": "package_report_scan"
+}

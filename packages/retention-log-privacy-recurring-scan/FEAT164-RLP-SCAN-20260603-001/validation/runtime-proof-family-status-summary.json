@@ -1,0 +1,17 @@
+{
+  "blockingStatuses": [
+    "missing",
+    "stale",
+    "mismatched",
+    "superseded",
+    "blocked",
+    "unknown"
+  ],
+  "claimEffect": "currentness_wording_allowed_for_this_public_fixture",
+  "currentStatus": "accepted",
+  "featureId": "FEAT-164",
+  "generatedAt": "2026-06-03T00:00:00Z",
+  "proofFamily": "retention_log_privacy",
+  "requiredWhenLiveReportClaimed": true,
+  "schemaVersion": "retention-log-privacy-runtime-proof-family-status-summary.v1"
+}

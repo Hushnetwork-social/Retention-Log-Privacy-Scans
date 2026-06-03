@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "retention-log-privacy-forbidden-material-catalog.v1",
+  "featureId": "FEAT-164",
+  "catalogId": "RLP164-FORBIDDEN-MATERIAL-CATALOG-20260603-001",
+  "rulesetVersion": "rlp164-public-safe-ruleset-v1",
+  "generatedAt": "2026-06-03T00:00:00Z",
+  "categories": [
+    {
+      "categoryId": "voter_identity",
+      "resultCode": "RLP164_FORBIDDEN_VOTER_MATERIAL",
+      "publicDescription": "Public outputs must not include voter, shareholder, trustee, operator, account, or support-case identifiers.",
+      "claimImpact": "block_score_movement"
+    },
+    {
+      "categoryId": "ballot_linkage",
+      "resultCode": "RLP164_BALLOT_LINKAGE_FORBIDDEN",
+      "publicDescription": "Public outputs must not expose ballot choices, accepted-to-published mappings, receipt capabilities, witnesses, or private randomness.",
+      "claimImpact": "block_score_movement"
+    },
+    {
+      "categoryId": "receipt_recovery",
+      "resultCode": "RLP164_RECEIPT_RECOVERY_FORBIDDEN",
+      "publicDescription": "Public outputs must not provide receipt recovery material or reconstruct voter-held capabilities.",
+      "claimImpact": "block_score_movement"
+    },
+    {
+      "categoryId": "raw_log_payload",
+      "resultCode": "RLP164_RAW_LOG_FORBIDDEN",
+      "publicDescription": "Raw logs and diagnostics payloads are not public package inputs or outputs.",
+      "claimImpact": "block_score_movement"
+    },
+    {
+      "categoryId": "raw_trace_payload",
+      "resultCode": "RLP164_TRACE_PAYLOAD_FORBIDDEN",
+      "publicDescription": "Raw trace samples, metrics payloads, and correlation labels that identify people or ballots are not public material.",
+      "claimImpact": "block_score_movement"
+    },
+    {
+      "categoryId": "support_payload",
+      "resultCode": "RLP164_SUPPORT_PAYLOAD_FORBIDDEN",
+      "publicDescription": "Support exports may be represented by schemas, redaction states, ids, and hashes only.",
+      "claimImpact": "block_score_movement"
+    },
+    {
+      "categoryId": "private_path_or_dependency",
+      "resultCode": "RLP164_PRIVATE_PATH_FORBIDDEN",
+      "publicDescription": "Public-only validation must not depend on private repositories, local workstation paths, or restricted reviewer payload paths.",
+      "claimImpact": "block_score_movement"
+    },
+    {
+      "categoryId": "secret_or_credential",
+      "resultCode": "RLP164_SECRET_FORBIDDEN",
+      "publicDescription": "Secrets, credentials, tokens, keys, signing material, and provider details are forbidden in public outputs.",
+      "claimImpact": "block_score_movement"
+    },
+    {
+      "categoryId": "private_scanner_finding",
+      "resultCode": "RLP164_PRIVATE_FINDING_FORBIDDEN",
+      "publicDescription": "Private scanner findings and vulnerability details remain restricted and are not public validator inputs.",
+      "claimImpact": "block_score_movement"
+    },
+    {
+      "categoryId": "overclaim",
+      "resultCode": "RLP164_OVERCLAIM_FORBIDDEN",
+      "publicDescription": "Generated wording must not claim certification, legal sufficiency, external audit acceptance, public/state election readiness, production rollout approval, or direct register mutation.",
+      "claimImpact": "block_score_movement"
+    }
+  ]
+}

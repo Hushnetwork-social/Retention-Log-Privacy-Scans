@@ -1,0 +1,128 @@
+{
+  "artifactHashes": [
+    {
+      "mediaType": "text/markdown",
+      "path": "README.md",
+      "sha256Hash": "bfc8afdbba80b1df596c27a16d288bb85cfe984d96570e14126fee31cdea3ede",
+      "sizeBytes": 802,
+      "visibility": "public"
+    },
+    {
+      "mediaType": "application/json",
+      "path": "handoff/retention-log-privacy-recurring-scan-downstream-handoff.json",
+      "sha256Hash": "57ee7a1a0992225aa4db8e3367fe98ef3802998382933f267980ecf7e24c193f",
+      "sizeBytes": 1288,
+      "visibility": "public"
+    },
+    {
+      "mediaType": "application/json",
+      "path": "readiness/retention-log-privacy-recurring-scan-readiness-fragment.json",
+      "sha256Hash": "5dc1b1203f8834c3dbc8a2d187ea26461233fda44ef741fd136b8ab2eca80acd",
+      "sizeBytes": 1283,
+      "visibility": "public"
+    },
+    {
+      "mediaType": "application/json",
+      "path": "readiness/retention-log-privacy-recurring-scan-score-proposal.json",
+      "sha256Hash": "89fad28cc4771b542aa63933fcc94ceae966065048af424567a3d7858c54eb95",
+      "sizeBytes": 668,
+      "visibility": "public"
+    },
+    {
+      "mediaType": "text/markdown",
+      "path": "restricted/restricted-evidence-index.schema-note.md",
+      "sha256Hash": "fa268e26373e94456eac2fbaaeff9b5564c9229251e524cd9c311bdbdcaa7e43",
+      "sizeBytes": 510,
+      "visibility": "restricted-ref"
+    },
+    {
+      "mediaType": "application/json",
+      "path": "retention-log-privacy-recurring-scan-package.json",
+      "sha256Hash": "25657f8b852a039a08fe187c14568ea074b9dfca5e83bd217f20a11e0bd290eb",
+      "sizeBytes": 4553,
+      "visibility": "public"
+    },
+    {
+      "mediaType": "application/json",
+      "path": "validation/feat137-proof-currentness-summary.json",
+      "sha256Hash": "63a42368e4239a29f7a8ca1303ad177c8de0b785aab8b63012622286e9ade764",
+      "sizeBytes": 692,
+      "visibility": "public"
+    },
+    {
+      "mediaType": "application/json",
+      "path": "validation/log-diagnostic-scan-summary.json",
+      "sha256Hash": "32ace10afa5ea363633e97e4a4aec233e62badc29fb71e554eaa9dc275721ed7",
+      "sizeBytes": 694,
+      "visibility": "public"
+    },
+    {
+      "mediaType": "application/json",
+      "path": "validation/no-secret-scan-result.json",
+      "sha256Hash": "e86d365caa76a6ce7f17f5f8e3441d11315e0aad19a63b1f15f1400b3e880106",
+      "sizeBytes": 268,
+      "visibility": "public"
+    },
+    {
+      "mediaType": "application/json",
+      "path": "validation/package-report-scan-summary.json",
+      "sha256Hash": "7266d9e5fcbcbdd929b0b8a790ddfb7fa56d94174f59b8f8c5d1d9b497bf39e0",
+      "sizeBytes": 906,
+      "visibility": "public"
+    },
+    {
+      "mediaType": "application/json",
+      "path": "validation/public-only-validation-summary.json",
+      "sha256Hash": "32c83884789d9ffcc08eea88d0865260b80df557c342b82fb0c8579f26117354",
+      "sizeBytes": 396,
+      "visibility": "public"
+    },
+    {
+      "mediaType": "application/json",
+      "path": "validation/runtime-proof-family-status-summary.json",
+      "sha256Hash": "56ca7f5daf0c300eac75d7936eb5de0cd041d1bd470f2eb27aeedf0f84ea4688",
+      "sizeBytes": 462,
+      "visibility": "public"
+    },
+    {
+      "mediaType": "application/json",
+      "path": "validation/support-export-scan-summary.json",
+      "sha256Hash": "19e009dfc3bb9cb864ddf3d15ca7cb15a94f3474474ff04d810567e44d6e2b2e",
+      "sizeBytes": 732,
+      "visibility": "public"
+    },
+    {
+      "mediaType": "application/json",
+      "path": "validation/trace-observability-drift-summary.json",
+      "sha256Hash": "9d3207a6ac6d5caefb451c1585e997e60be7932341f4ff201bdea5aeb0c46524",
+      "sizeBytes": 704,
+      "visibility": "public"
+    }
+  ],
+  "featureId": "FEAT-164",
+  "generatedAt": "2026-06-03T00:00:00Z",
+  "packageId": "FEAT164-RLP-SCAN-PACKAGE-20260603-001",
+  "readinessOutput": {
+    "dimensionId": "RDY-DIM-008",
+    "directRegisterMutation": false,
+    "proposedScoreFrom": 8,
+    "proposedScoreTo": 9,
+    "targetBlockerId": "RDY-BLOCK-INTERNAL_AUDIT_95_DIM008-001"
+  },
+  "restrictedEvidencePolicy": {
+    "payloadPublished": false,
+    "publicRefFieldsOnly": true
+  },
+  "scanRunId": "FEAT164-RLP-SCAN-20260603-001",
+  "schemaVersion": "retention-log-privacy-recurring-scan-package-manifest.v1",
+  "sourceRef": {
+    "path": "examples/release-baseline/retention-log-privacy-recurring-scan-source.json",
+    "ref": "main",
+    "repository": "Hushnetwork-social/Retention-Log-Privacy-Scans"
+  },
+  "validationStatus": {
+    "allRequiredGatesAccepted": true,
+    "blockingResultCodes": [],
+    "status": "accepted"
+  }
+}

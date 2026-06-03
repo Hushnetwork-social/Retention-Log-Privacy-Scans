@@ -1,0 +1,168 @@
+{
+  "schemaVersion": "retention-log-privacy-output-family-registry.v1",
+  "featureId": "FEAT-164",
+  "registryId": "RLP164-OUTPUT-FAMILY-REGISTRY-20260603-001",
+  "generatedAt": "2026-06-03T00:00:00Z",
+  "failClosedForUnclassifiedFamilies": true,
+  "families": [
+    {
+      "familyId": "logs",
+      "visibility": "public",
+      "scannerDecision": "scan_required",
+      "publicPayloadAllowed": false,
+      "allowedPublicFields": [
+        "sourceRef",
+        "schemaHash",
+        "redactionState",
+        "resultCode"
+      ],
+      "forbiddenFields": [
+        "rawLogPayload",
+        "voterIdentifier",
+        "ballotReference",
+        "receiptCapability",
+        "secret"
+      ]
+    },
+    {
+      "familyId": "diagnostics",
+      "visibility": "public",
+      "scannerDecision": "scan_required",
+      "publicPayloadAllowed": false,
+      "allowedPublicFields": [
+        "schemaHash",
+        "fieldInventoryHash",
+        "resultCode"
+      ],
+      "forbiddenFields": [
+        "diagnosticPayload",
+        "customerIdentifier",
+        "localPath",
+        "privateFinding"
+      ]
+    },
+    {
+      "familyId": "traces",
+      "visibility": "public",
+      "scannerDecision": "scan_required",
+      "publicPayloadAllowed": false,
+      "allowedPublicFields": [
+        "attributeCatalogHash",
+        "resultCode"
+      ],
+      "forbiddenFields": [
+        "rawTraceSample",
+        "correlationLabel",
+        "voterIdentifier",
+        "ballotReference"
+      ]
+    },
+    {
+      "familyId": "metrics",
+      "visibility": "public",
+      "scannerDecision": "scan_required",
+      "publicPayloadAllowed": false,
+      "allowedPublicFields": [
+        "labelCatalogHash",
+        "resultCode"
+      ],
+      "forbiddenFields": [
+        "metricsPayload",
+        "accountIdentifier",
+        "correlationLabel"
+      ]
+    },
+    {
+      "familyId": "support_exports",
+      "visibility": "restricted",
+      "scannerDecision": "restricted_ref_only",
+      "publicPayloadAllowed": false,
+      "allowedPublicFields": [
+        "restrictedEvidenceId",
+        "schemaHash",
+        "redactionPolicyHash",
+        "payloadPublished",
+        "resultCode"
+      ],
+      "forbiddenFields": [
+        "supportCaseContent",
+        "supportPayload",
+        "customerIdentifier",
+        "operatorIdentifier"
+      ]
+    },
+    {
+      "familyId": "public_packages",
+      "visibility": "public",
+      "scannerDecision": "scan_required",
+      "publicPayloadAllowed": true,
+      "allowedPublicFields": [
+        "packageId",
+        "manifestHash",
+        "artifactHashes",
+        "resultCode"
+      ],
+      "forbiddenFields": [
+        "privatePath",
+        "privateScannerFinding",
+        "rawLogPayload",
+        "rawTraceSample"
+      ]
+    },
+    {
+      "familyId": "reviewer_reports",
+      "visibility": "public",
+      "scannerDecision": "public_safe_summary_only",
+      "publicPayloadAllowed": true,
+      "allowedPublicFields": [
+        "summaryId",
+        "resultCodes",
+        "residualRisk",
+        "nonClaims"
+      ],
+      "forbiddenFields": [
+        "certification",
+        "legalSufficiency",
+        "externalAuditAcceptance",
+        "publicStateElectionReadiness"
+      ]
+    },
+    {
+      "familyId": "ci_outputs",
+      "visibility": "public",
+      "scannerDecision": "scan_required",
+      "publicPayloadAllowed": true,
+      "allowedPublicFields": [
+        "workflowRef",
+        "commitHash",
+        "resultCode",
+        "artifactHashes"
+      ],
+      "forbiddenFields": [
+        "secret",
+        "credential",
+        "token",
+        "privateDependencyRequired"
+      ]
+    },
+    {
+      "familyId": "restricted_indexes",
+      "visibility": "restricted",
+      "scannerDecision": "restricted_ref_only",
+      "publicPayloadAllowed": false,
+      "allowedPublicFields": [
+        "restrictedEvidenceId",
+        "expectedHash",
+        "visibility",
+        "payloadPublished",
+        "noPayloadNote"
+      ],
+      "forbiddenFields": [
+        "restrictedReviewerPayload",
+        "privateFinding",
+        "customerIdentifier",
+        "supportCaseContent"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,375 @@
+{
+  "schemaVersion": "retention-log-privacy-recurring-scan-source.v1",
+  "featureId": "FEAT-164",
+  "scanRunId": "FEAT164-RLP-SCAN-20260603-001",
+  "generatedAt": "2026-06-03T00:00:00Z",
+  "readinessBaseline": {
+    "registerVersionId": "RDY-REG-v0.1.7",
+    "dimensionId": "RDY-DIM-008",
+    "currentScore": 8,
+    "proposedScore": 9,
+    "targetBlockerId": "RDY-BLOCK-INTERNAL_AUDIT_95_DIM008-001"
+  },
+  "feat137Proof": {
+    "packageId": "RETENTION-LOG-PRIVACY-PROOF-HUSHVOTING-V1",
+    "packageHash": "974a462ff80c84716f0945103a624bc30d0fe7b201d5d3224fd274c42ce4bbfe",
+    "privacyBoundaryVersion": "hushvoting-retention-log-privacy-boundary-v1",
+    "evidenceStatus": "accepted",
+    "sourceRefs": [
+      {
+        "repository": "Hushnetwork-social/HushVoting-Readiness-Proof-Packages",
+        "ref": "rlp-20260521-001",
+        "path": "hushvoting-v1/retention-log-privacy/rlp-20260521-001/package/retention-log-privacy-proof-package.json",
+        "sha256": "974a462ff80c84716f0945103a624bc30d0fe7b201d5d3224fd274c42ce4bbfe"
+      },
+      {
+        "repository": "Hushnetwork-social/HushVoting-Readiness-Proof-Packages",
+        "ref": "rlp-20260521-001",
+        "path": "hushvoting-v1/retention-log-privacy/rlp-20260521-001/package/readiness-fragment.json",
+        "sha256": "c45a3b15bf470a67e4ff85519c610b618d80f15f4dd35da244d7db94349bef63"
+      }
+    ]
+  },
+  "runtimeProofFamily": {
+    "requiredWhenLiveReportClaimed": true,
+    "currentStatus": "accepted",
+    "proofFamily": "retention_log_privacy",
+    "allowedStatuses": [
+      "accepted"
+    ],
+    "blockingStatuses": [
+      "missing",
+      "stale",
+      "mismatched",
+      "superseded",
+      "blocked",
+      "unknown"
+    ]
+  },
+  "scannerBaseline": {
+    "scannerVersion": "retention-log-privacy-recurring-scan-promoter.v1",
+    "rulesetVersion": "rlp164-public-safe-ruleset-v1",
+    "forbiddenMaterialCatalogHash": "6f837e7306b4ca9252a7a9bcb377d1bf1dd142330b24212dd26549d6bcd53039",
+    "outputFamilyRegistryHash": "756b6e5b3bbbbcd75cce32a5b51865af7d10011a699098bfd5a73dc7832237d6"
+  },
+  "outputFamilies": [
+    {
+      "familyId": "logs",
+      "visibility": "public",
+      "scannerDecision": "scan_required",
+      "publicPayloadAllowed": false,
+      "allowedPublicFields": [
+        "sourceRef",
+        "schemaHash",
+        "redactionState",
+        "resultCode"
+      ],
+      "forbiddenFields": [
+        "rawLogPayload",
+        "voterIdentifier",
+        "ballotReference",
+        "receiptCapability",
+        "secret"
+      ]
+    },
+    {
+      "familyId": "diagnostics",
+      "visibility": "public",
+      "scannerDecision": "scan_required",
+      "publicPayloadAllowed": false,
+      "allowedPublicFields": [
+        "schemaHash",
+        "fieldInventoryHash",
+        "resultCode"
+      ],
+      "forbiddenFields": [
+        "diagnosticPayload",
+        "customerIdentifier",
+        "localPath",
+        "privateFinding"
+      ]
+    },
+    {
+      "familyId": "traces",
+      "visibility": "public",
+      "scannerDecision": "scan_required",
+      "publicPayloadAllowed": false,
+      "allowedPublicFields": [
+        "attributeCatalogHash",
+        "resultCode"
+      ],
+      "forbiddenFields": [
+        "rawTraceSample",
+        "correlationLabel",
+        "voterIdentifier",
+        "ballotReference"
+      ]
+    },
+    {
+      "familyId": "metrics",
+      "visibility": "public",
+      "scannerDecision": "scan_required",
+      "publicPayloadAllowed": false,
+      "allowedPublicFields": [
+        "labelCatalogHash",
+        "resultCode"
+      ],
+      "forbiddenFields": [
+        "metricsPayload",
+        "accountIdentifier",
+        "correlationLabel"
+      ]
+    },
+    {
+      "familyId": "support_exports",
+      "visibility": "restricted",
+      "scannerDecision": "restricted_ref_only",
+      "publicPayloadAllowed": false,
+      "allowedPublicFields": [
+        "restrictedEvidenceId",
+        "schemaHash",
+        "redactionPolicyHash",
+        "payloadPublished",
+        "resultCode"
+      ],
+      "forbiddenFields": [
+        "supportCaseContent",
+        "supportPayload",
+        "customerIdentifier",
+        "operatorIdentifier"
+      ]
+    },
+    {
+      "familyId": "public_packages",
+      "visibility": "public",
+      "scannerDecision": "scan_required",
+      "publicPayloadAllowed": true,
+      "allowedPublicFields": [
+        "packageId",
+        "manifestHash",
+        "artifactHashes",
+        "resultCode"
+      ],
+      "forbiddenFields": [
+        "privatePath",
+        "privateScannerFinding",
+        "rawLogPayload",
+        "rawTraceSample"
+      ]
+    },
+    {
+      "familyId": "reviewer_reports",
+      "visibility": "public",
+      "scannerDecision": "public_safe_summary_only",
+      "publicPayloadAllowed": true,
+      "allowedPublicFields": [
+        "summaryId",
+        "resultCodes",
+        "residualRisk",
+        "nonClaims"
+      ],
+      "forbiddenFields": [
+        "certification",
+        "legalSufficiency",
+        "externalAuditAcceptance",
+        "publicStateElectionReadiness"
+      ]
+    },
+    {
+      "familyId": "ci_outputs",
+      "visibility": "public",
+      "scannerDecision": "scan_required",
+      "publicPayloadAllowed": true,
+      "allowedPublicFields": [
+        "workflowRef",
+        "commitHash",
+        "resultCode",
+        "artifactHashes"
+      ],
+      "forbiddenFields": [
+        "secret",
+        "credential",
+        "token",
+        "privateDependencyRequired"
+      ]
+    },
+    {
+      "familyId": "restricted_indexes",
+      "visibility": "restricted",
+      "scannerDecision": "restricted_ref_only",
+      "publicPayloadAllowed": false,
+      "allowedPublicFields": [
+        "restrictedEvidenceId",
+        "expectedHash",
+        "visibility",
+        "payloadPublished",
+        "noPayloadNote"
+      ],
+      "forbiddenFields": [
+        "restrictedReviewerPayload",
+        "privateFinding",
+        "customerIdentifier",
+        "supportCaseContent"
+      ]
+    }
+  ],
+  "scanInputs": [
+    {
+      "inputId": "log-schema-field-inventory",
+      "outputFamilyId": "logs",
+      "sourceRef": {
+        "repository": "Hushnetwork-social/Retention-Log-Privacy-Scans",
+        "ref": "main",
+        "path": "examples/release-baseline/log-schema-field-inventory.public.json",
+        "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+      },
+      "expectedVisibility": "public"
+    },
+    {
+      "inputId": "diagnostic-field-inventory",
+      "outputFamilyId": "diagnostics",
+      "sourceRef": {
+        "repository": "Hushnetwork-social/Retention-Log-Privacy-Scans",
+        "ref": "main",
+        "path": "examples/release-baseline/diagnostic-field-inventory.public.json",
+        "sha256": "2222222222222222222222222222222222222222222222222222222222222222"
+      },
+      "expectedVisibility": "public"
+    },
+    {
+      "inputId": "trace-attribute-catalog",
+      "outputFamilyId": "traces",
+      "sourceRef": {
+        "repository": "Hushnetwork-social/Retention-Log-Privacy-Scans",
+        "ref": "main",
+        "path": "examples/release-baseline/trace-attribute-catalog.public.json",
+        "sha256": "3333333333333333333333333333333333333333333333333333333333333333"
+      },
+      "expectedVisibility": "public"
+    },
+    {
+      "inputId": "metrics-label-catalog",
+      "outputFamilyId": "metrics",
+      "sourceRef": {
+        "repository": "Hushnetwork-social/Retention-Log-Privacy-Scans",
+        "ref": "main",
+        "path": "examples/release-baseline/metrics-label-catalog.public.json",
+        "sha256": "4444444444444444444444444444444444444444444444444444444444444444"
+      },
+      "expectedVisibility": "public"
+    },
+    {
+      "inputId": "support-export-redaction-state",
+      "outputFamilyId": "support_exports",
+      "sourceRef": {
+        "repository": "Hushnetwork-social/Retention-Log-Privacy-Scans",
+        "ref": "main",
+        "path": "examples/release-baseline/support-export-redaction-state.public.json",
+        "sha256": "5555555555555555555555555555555555555555555555555555555555555555"
+      },
+      "expectedVisibility": "restricted"
+    },
+    {
+      "inputId": "public-package-output-inventory",
+      "outputFamilyId": "public_packages",
+      "sourceRef": {
+        "repository": "Hushnetwork-social/Retention-Log-Privacy-Scans",
+        "ref": "main",
+        "path": "examples/release-baseline/public-package-output-inventory.public.json",
+        "sha256": "6666666666666666666666666666666666666666666666666666666666666666"
+      },
+      "expectedVisibility": "public"
+    },
+    {
+      "inputId": "reviewer-report-wording-catalog",
+      "outputFamilyId": "reviewer_reports",
+      "sourceRef": {
+        "repository": "Hushnetwork-social/Retention-Log-Privacy-Scans",
+        "ref": "main",
+        "path": "examples/release-baseline/reviewer-report-wording-catalog.public.json",
+        "sha256": "7777777777777777777777777777777777777777777777777777777777777777"
+      },
+      "expectedVisibility": "public"
+    },
+    {
+      "inputId": "public-ci-output-contract",
+      "outputFamilyId": "ci_outputs",
+      "sourceRef": {
+        "repository": "Hushnetwork-social/Retention-Log-Privacy-Scans",
+        "ref": "main",
+        "path": "examples/release-baseline/public-ci-output-contract.public.json",
+        "sha256": "8888888888888888888888888888888888888888888888888888888888888888"
+      },
+      "expectedVisibility": "public"
+    },
+    {
+      "inputId": "restricted-index-public-ref-contract",
+      "outputFamilyId": "restricted_indexes",
+      "sourceRef": {
+        "repository": "Hushnetwork-social/Retention-Log-Privacy-Scans",
+        "ref": "main",
+        "path": "examples/release-baseline/restricted-index-public-ref-contract.public.json",
+        "sha256": "9999999999999999999999999999999999999999999999999999999999999999"
+      },
+      "expectedVisibility": "restricted"
+    }
+  ],
+  "driftChecks": [
+    {
+      "checkId": "log-diagnostic-field-drift",
+      "target": "logs,diagnostics",
+      "failClosedWhenChanged": true
+    },
+    {
+      "checkId": "trace-metrics-correlation-label-drift",
+      "target": "traces,metrics",
+      "failClosedWhenChanged": true
+    },
+    {
+      "checkId": "support-export-redaction-drift",
+      "target": "support_exports",
+      "failClosedWhenChanged": true
+    },
+    {
+      "checkId": "public-package-report-wording-drift",
+      "target": "public_packages,reviewer_reports,ci_outputs,restricted_indexes",
+      "failClosedWhenChanged": true
+    }
+  ],
+  "resultCodes": [
+    "RLP164_ACCEPTED",
+    "RLP164_FEAT137_PROOF_CURRENTNESS_BLOCKED",
+    "RLP164_SCANNER_BASELINE_MISSING",
+    "RLP164_RULE_HASH_MISMATCH",
+    "RLP164_UNCLASSIFIED_OUTPUT_FAMILY",
+    "RLP164_PRIVATE_PATH_FORBIDDEN",
+    "RLP164_DIRECT_REGISTER_MUTATION_FORBIDDEN",
+    "RLP164_WRONG_SCORE_RANGE"
+  ],
+  "publicSafetyPolicy": {
+    "publicOnlyValidation": true,
+    "forbiddenPublicPathPatterns": [
+      "PrivateServer_ElectronicVoting",
+      "C:\\",
+      "/Users/",
+      "/home/"
+    ],
+    "forbiddenClaimPhrases": [
+      "external audit acceptance",
+      "certification",
+      "legal sufficiency",
+      "public/state election readiness",
+      "production rollout approval"
+    ]
+  },
+  "scorePolicy": {
+    "dimensionId": "RDY-DIM-008",
+    "proposedScoreFrom": 8,
+    "proposedScoreTo": 9,
+    "directRegisterMutation": false
+  },
+  "restrictedEvidencePolicy": {
+    "payloadPublished": false,
+    "publicRefFieldsOnly": true
+  }
+}

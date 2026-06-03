@@ -1,0 +1,25 @@
+{
+  "driftDecision": "fail_closed_when_changed",
+  "families": [
+    {
+      "familyId": "support_exports",
+      "payloadPublished": false,
+      "resultCode": "RLP164_ACCEPTED",
+      "scannerDecision": "restricted_ref_only",
+      "visibility": "restricted"
+    },
+    {
+      "familyId": "restricted_indexes",
+      "payloadPublished": false,
+      "resultCode": "RLP164_ACCEPTED",
+      "scannerDecision": "restricted_ref_only",
+      "visibility": "restricted"
+    }
+  ],
+  "featureId": "FEAT-164",
+  "generatedAt": "2026-06-03T00:00:00Z",
+  "publicPayloadPublication": "policy_checked",
+  "schemaVersion": "retention-log-privacy-support-export-scan-summary.v1",
+  "status": "accepted",
+  "summaryId": "support_export_scan"
+}

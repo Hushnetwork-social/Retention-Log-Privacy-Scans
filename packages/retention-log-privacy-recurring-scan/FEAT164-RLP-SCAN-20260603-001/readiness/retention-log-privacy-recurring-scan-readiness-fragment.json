@@ -1,0 +1,29 @@
+{
+  "acceptedEvidenceRefs": [
+    "validation/feat137-proof-currentness-summary.json",
+    "validation/log-diagnostic-scan-summary.json",
+    "validation/trace-observability-drift-summary.json",
+    "validation/support-export-scan-summary.json",
+    "validation/package-report-scan-summary.json",
+    "validation/no-secret-scan-result.json"
+  ],
+  "dimensionId": "RDY-DIM-008",
+  "downgradeOrBlockWhen": [
+    "FEAT-137 proof is missing, stale, mismatched, superseded, blocked, or unknown",
+    "scanner baseline or output-family registry hash changes without acceptance",
+    "public outputs contain restricted privacy material",
+    "public-only validation requires private repositories, credentials, or live private services"
+  ],
+  "featureId": "FEAT-164",
+  "generatedAt": "2026-06-03T00:00:00Z",
+  "registerVersionId": "RDY-REG-v0.1.7",
+  "residualRisk": "Future logging, diagnostics, observability, support exports, and package/report outputs must remain classified and fail closed when new output families appear.",
+  "schemaVersion": "retention-log-privacy-recurring-scan-readiness-fragment.v1",
+  "scoreEffect": {
+    "directRegisterMutation": false,
+    "from": 8,
+    "proposalOnly": true,
+    "to": 9
+  },
+  "targetBlockerId": "RDY-BLOCK-INTERNAL_AUDIT_95_DIM008-001"
+}

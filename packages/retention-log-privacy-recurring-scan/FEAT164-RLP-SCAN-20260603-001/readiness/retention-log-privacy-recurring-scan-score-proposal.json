@@ -1,0 +1,21 @@
+{
+  "blockedUnlessAllGatesPass": true,
+  "dimensionId": "RDY-DIM-008",
+  "directRegisterMutation": false,
+  "feat137DependencyUse": "accepted_one_time_baseline_currentness_only",
+  "featureId": "FEAT-164",
+  "generatedAt": "2026-06-03T00:00:00Z",
+  "nonClaims": [
+    "external_audit_acceptance",
+    "certification",
+    "legal_sufficiency",
+    "public_state_election_readiness",
+    "production_rollout_approval",
+    "direct_register_mutation"
+  ],
+  "proposalOnly": true,
+  "proposedScoreFrom": 8,
+  "proposedScoreTo": 9,
+  "schemaVersion": "retention-log-privacy-recurring-scan-score-proposal.v1",
+  "targetBlockerId": "RDY-BLOCK-INTERNAL_AUDIT_95_DIM008-001"
+}

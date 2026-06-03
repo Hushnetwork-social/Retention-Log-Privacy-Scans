@@ -1,0 +1,21 @@
+{
+  "blockedWhen": [
+    "missing",
+    "stale",
+    "mismatched",
+    "superseded",
+    "blocked",
+    "unknown"
+  ],
+  "dependencyUse": "accepted_one_time_baseline_currentness_only",
+  "doesNotRepeatFeat137ScoreMovement": true,
+  "evidenceStatus": "accepted",
+  "featureId": "FEAT-164",
+  "generatedAt": "2026-06-03T00:00:00Z",
+  "packageHash": "974a462ff80c84716f0945103a624bc30d0fe7b201d5d3224fd274c42ce4bbfe",
+  "packageId": "RETENTION-LOG-PRIVACY-PROOF-HUSHVOTING-V1",
+  "privacyBoundaryVersion": "hushvoting-retention-log-privacy-boundary-v1",
+  "resultCode": "RLP164_ACCEPTED",
+  "schemaVersion": "retention-log-privacy-feat137-proof-currentness-summary.v1",
+  "status": "accepted"
+}
